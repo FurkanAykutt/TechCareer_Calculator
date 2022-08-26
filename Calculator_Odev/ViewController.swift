@@ -29,9 +29,13 @@ class ViewController: UIViewController {
     }
 
     @IBAction func plusButton(_ sender: Any) {
-        if runningNumber != "" {
+        if runningNumber != "" && result == "" {
             rightValue = runningNumber
             runningNumber = ""
+        }
+        else if result != ""{
+            rightValue = result
+            result = ""
         }
     }
     @IBAction func equalButton(_ sender: Any) {
